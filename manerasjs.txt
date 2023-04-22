@@ -1,0 +1,4 @@
+Script en línea
+Script interno
+Script externo
+Múltiples scripts externos
