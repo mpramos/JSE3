@@ -9,7 +9,7 @@
 
 let palabra= "JavaScript" //String 
 console.log(palabra[5]='Y')
-console.log(palabra)
+console.log(palabra)// INMUTABLES //CAMBIAR
 //* Comparacion de valores de tipos de datos primitivos
 let numeroUno=3 //number
 let numeroDos=3 //number
@@ -18,6 +18,7 @@ console.log(numeroUno==numeroDos) //true
 let js='JavaScript' //String
 let py = 'Python'   //String
 console.log(js==py) //false
+
 
 let luzEncendida= true
 let luzApagada= false
@@ -43,6 +44,7 @@ console.log(nums == numeritos) //true
  let copiausuario=usuario
 
  console.log(copiausuario==usuario)
+
 
 
 
