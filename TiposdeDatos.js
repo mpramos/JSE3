@@ -39,7 +39,7 @@ console.log(nums == numeritos) //true
  let usuario={
     name:'Susana',
     reole:'developer',
-    country:1
+    country:1,
  }
  let copiausuario=usuario
 
