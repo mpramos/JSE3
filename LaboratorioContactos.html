@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let contacts = [{
+            name: "Maxwell Wright",
+            phone: "(0191) 719 6495",
+            email: "egestas@nonummyac.co.uk"
+        }, {
+            name: "Raja Villarreal",
+            phone: "0866 398 2895",
+            email: "posuere@sed.com"
+        }, {
+            name: "Helen Richards",
+            phone: "0800 1111",
+            email: "libero@vallis.edu"
+        }];
+        alert(`Nombre: ${contacts[0].name}, Telefono:  ${contacts[0].phone},Email:${contacts[0].email}`)
+        let ultimo=contacts.length-1
+        alert(`Nombre: ${contacts[ultimo].name}, Telefono:  ${contacts[ultimo].phone},Email:${contacts[ultimo].email}`)
+
+      let nombre=prompt("Ingresa el nombre del contacto","maria")
+      let email=prompt("Ingresa el email del contacto","mpra@com")
+      let telefono=prompt("Ingresa el telefono del contacto",77777)
+
+      let nuevo={
+            name: nombre ,
+            phone:telefono ,
+            email: email,
+      }
+      contacts.push(nuevo)
+      console.log(contacts);
+      alert(`Los datos del nuevo contacto son : ${nuevo.name} ${nuevo.phone} ${nuevo.email} `)
+    
+    </script>
+</body>
+
+</html>

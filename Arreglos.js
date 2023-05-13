@@ -7,12 +7,13 @@ const nombres=["Maria","Juana","Ana"]
 const numeros=[1,1,1]
 console.log(nombres);
 
-const emojis=['🍊','🍓','🍋','💻','📲','👨🏻‍💻']
+const emojis=['🍊','🍓','🍋','💻','📲','👨🏻‍💻','😂','😃','😎']// 8-1 //7
 //🍊 => 0 
 //🍓 => 1
 //🍋 => 2
 //💻 => 3
 //📲 => 4
+console.log(emojis[emojis.length-1]);
 console.log(emojis);
 const frutas=emojis.slice(0,3)
 console.log(emojis);
