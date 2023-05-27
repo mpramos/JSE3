@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Escribe una aplicación de calculadora simple. Solicite al usuario la siguiente entrada, uno por uno: dos números y un carácter que representa una operación matemática de "+", "-", " *", o "/". Si la entrada del usuario es válida, calcula el resultado y muéstralo al usuario. Si la entrada del usuario no es válida, muestra un mensaje que informa al usuario que se ha producido un error. Recuerda que el valor devuelto por la función prompt es del tipo cadena. Puedes usar el método Number.isNaN para verificar si se obtiene el número correcto después de la conversión. Por ejemplo, llamar a Number.isNaN(10) devolverá false, mientras que Number.isNaN(NaN) devolverá true.
+        while (true) {
+            let numero1 = prompt("Ingrese el primer numero")
+            let numero2 = prompt("Ingrese el segundo numero")
+            let operacion = prompt("Ingresa una operacion + ,-,*,/")
+            let resultado
+            if (numero1 === "S" || numero2 === "S" || operacion === "S") {
+                break
+            }
+            numero1=Number(numero1)
+            numero2=Number(numero2)
+
+            if (Number.isNaN(numero1) && Number.isNaN(numero2)) {
+                alert("No es valido el numero que introduciste")
+            } else {
+
+                switch (operacion) {
+                    case '+':
+                        resultado = numero1 + numero2
+                        break;
+                    case '-':
+                        resultado = numero1 - numero2
+
+                        break;
+                    case '*':
+                        resultado = numero1 * numero2
+
+                        break;
+                    case '/':
+                        resultado = numero1 / numero2
+
+                        break;
+
+                    default:
+                        resultado = "Operacion desconocida"
+                            break;
+                }
+    
+            }
+            alert(resultado)
+        }
+       
+    </script>
+</body>
+
+</html>

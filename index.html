@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
     <meta charset="UTF-8">
@@ -7,8 +8,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <!-- guion en linea -->
-    <button onclick="alert('Este es mi primer hola en JavaScript')">Click Me</button>
+    <!-- <button onclick="alert('Este es mi primer hola en JavaScript')">Click Me</button> -->
+    <script>
+        let superiorLimite = Number(prompt("Ingrese el limite superior"))
+        let inferiorLimite = Number(prompt("Ingrese el limite  inferior"))
+        console.log(superiorLimite);
+        console.log(typeof superiorLimite);
+        console.log(inferiorLimite);
+        console.log(typeof inferiorLimite);
+        if (!Number.isNaN(superiorLimite) && !Number.isNaN(inferiorLimite) && superiorLimite > inferiorLimite) {
+            for (let i = superiorLimite; i >= inferiorLimite; i -= 10) {
+                alert(i);
+
+            }
+        }else{
+            alert("Los numeros ingresados no son numeros o son negativos");
+        }
+    </script>
 </body>
+
 </html>

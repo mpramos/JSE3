@@ -25,6 +25,11 @@ console.log(fruteria);
 const dispositivos= emojis.slice(-3)
 console.log(dispositivos);
 
+const emojis=['🍊','🍓','🍋','💻','📲','👨🏻‍💻','😂','😃','😎']// 8-1 //7
+let carita='🥱'
+ emojis.push(carita)  
+ console.log(emojis);
+
 
 
 

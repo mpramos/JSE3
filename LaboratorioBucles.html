@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let contacts = [{
+            name: "Maxwell Wright",
+            phone: "(0191) 719 6495",
+            email: "Curabitur@nonummyac.co.uk"
+        }, {
+            name: "Raja Villarreal",
+            phone: "0866 398 2895",
+            email: "posuera@sed.com"
+        }, {
+            name: "Helen Richards",
+            phone: "0800 1111",
+            email: "libero@convallis.edu"
+        }];//3-1=2 //2
+        let userInput = "";
+        while (userInput !== "salir") {
+            userInput = prompt("¿Que accion deseas realizar? (primero / último / todos / salir)")
+            switch (userInput) {
+                case "primero":
+                    if (contacts.length > 0) {
+                        alert(`${contacts[0].name} /${contacts[0].phone} /${contacts[0].email} /`);
+                    } else {
+                        alert("No hay contactos en la lista");
+                    }
+                    break;
+                case "último":
+                    if (contacts.length > 0) {
+                        alert(`${contacts[contacts.length - 1].name} /${contacts[contacts.length - 1].phone} /${contacts[contacts.length - 1].email} /`);
+                    }
+                    break;
+                case "todos":
+                    if (contacts.length > 0) {
+                        for (let i = 0; i < contacts.length; i++) {
+                            alert(`${contacts[i].name} /${contacts[i].phone} /${contacts[i].email} /`);
+                        }
+                    } else {
+                        alert("No hay contactos en la lista");
+                    }
+                    break;
+                case "salir":
+                    alert("Programa finalizado")
+                    break;
+
+                default:
+                    alert("acción es inválida, Por favor intente de nuevo");
+                    break;
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>

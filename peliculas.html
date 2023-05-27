@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let peliculas=[]
+        while(true){
+                let titulo= prompt("Ingrese el titulo de la pelicula")
+                let calificacion= prompt("Ingrese la calificación de la pelicula")
+            if(titulo=== null || calificacion===null){
+                    break
+            } else{
+                peliculas.push({
+                    titulo:titulo,
+                    calificacion:calificacion,
+                })
+            }
+
+        }
+        console.log("Peliculas con las califaciones inferiores a 7");
+        for(let pelicula of peliculas){
+            if(pelicula.calificacion<7){
+                console.log(`${pelicula.titulo} (${pelicula.calificacion})`);
+                
+            }
+        }
+        console.log("Peliculas con las califaciones superiores a 7");
+        for(let pelicula of peliculas){
+            if(pelicula.calificacion>=7){
+                console.log(`${pelicula.titulo} (${pelicula.calificacion})`);
+                
+            }
+        }
+        </script>
+    
+</body>
+</html>
