@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="titulo" id="primer-titulo">Primer Titulo</h1>
+    <h2 class="titulo" id="segundo-titulo" >Segundo Titulo</h2>
+    <p class="parrafo" id="segundo-titulo" >Segundo Titulo</p>
+    <script>
+        let titulo=document.getElementsByClassName('titulo')
+        for(let i=0;i<titulo.length;i++){
+            titulo[i].style.color='white'
+            titulo[i].style.backgroundColor='blue'
+            console.log(titulo[i]);
+        }
+        let primerTitulo=document.getElementById('primer-titulo')
+        console.log(titulo);
+        console.log(primerTitulo);
+    </script>
+</body>
+</html>

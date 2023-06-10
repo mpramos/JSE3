@@ -30,6 +30,24 @@ let carita='🥱'
  emojis.push(carita)  
  console.log(emojis);
 
+//Creacion de arreglos a partir del constructor
+const arr=Array(10)
+console.log(arr.length);
+const arr1=['🤓','🍕']
+console.log(arr1.length);
+//! SPLIT 
+let js="javaScript"
+const charsInJavaScript=js.split('')
+console.log(charsInJavaScript);
+let empresas='Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon'
+const empresasArreglo= empresas.split(',')
+console.log(empresasArreglo);
+let txt='Yo estoy aprendiendo a manejar. HTML, CSS, JS, React.'
+let palabras=txt.split(' ')
+console.log(palabras);
+
+
+
 
 
 
