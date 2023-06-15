@@ -1,24 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <h1 class="titulo" id="primer-titulo">Primer Titulo</h1>
-    <h2 class="titulo" id="segundo-titulo" >Segundo Titulo</h2>
-    <p class="parrafo" id="segundo-titulo" >Segundo Titulo</p>
+    <h1 class="titulo" id="primer-titulo" >Primer Titulo</h1>
+    <h2 class="titulo" id="segundo-titulo">Segundo Titulo</h2>
+    <h2 class="titulo" id="tercer-titulo">Segundo Titulo</h2>
+    <h2 class="titulo" id="cuarto-titulo">Segundo Titulo</h2>
+    <h2></h2>
+    <p class="parrafo" id="quinto-titulo">Segundo Titulo</p>
     <script>
-        let titulo=document.getElementsByClassName('titulo')
-        for(let i=0;i<titulo.length;i++){
-            titulo[i].style.color='white'
-            titulo[i].style.backgroundColor='blue'
+        let h2=document.getElementsByTagName('h2')
+        console.log(h2.length);
+        for (let index = 0; index < h2.length; index++) {
+            console.log(h2[index]);
+        }
+            let titulo = document.getElementsByClassName('titulo')
+        for (let i = 0; i < titulo.length; i++) {
+            titulo[i].style.color = 'white'
+            titulo[i].style.backgroundColor = 'blue'
             console.log(titulo[i]);
         }
-        let primerTitulo=document.getElementById('primer-titulo')
+        let primerTitulo = document.getElementById('primer-titulo')
         console.log(titulo);
         console.log(primerTitulo);
+        let firsTitle=document.querySelector('h1')
+        let secondTitle=document.querySelector('#segundo-titulo')
+        console.log(secondTitle);
+        let allTitles=document.querySelectorAll('.titulo')
+        console.log(allTitles.length);
+        for (let index = 0; index < allTitles.length; index++) {
+            console.log(allTitles[index]);
+        }
+        //Agregar atributo
+        let titles= document.querySelectorAll('h2')
+        console.log(titles);
+        titles[3].className='titulo'
+        titles[3].id='quinto-titulo'
+        titles[3].textContent="Quinto Titulo"
+
     </script>
 </body>
+
 </html>
