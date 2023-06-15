@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Titulo</h1>
+    <h1>Titulo</h1>
+    <h1>Titulo</h1>
+    <h2>Subtitulo</h2>
+    <ul></ul>
+    <script>
+        let list=`
+        <li> Primer Item</li>
+        <li> Segundo Item</li>
+        <li> Tercer Item</li>
+        <li> Cuarto Item</li>
+        `
+        let ul= document.querySelector('ul')
+        ul.innerHTML=list
+
+        let titulos=document.querySelectorAll('h1')
+        titulos.forEach((titulo,i)=>{
+            titulo.style.fontSize='24px'
+            if(i%2===0){
+                titulo.style.backgroundColor='blue'
+                titulo.style.color='white'
+            } else{
+                titulo.style.color='red'
+            }
+        })
+    </script>
+</body>
+</html>
