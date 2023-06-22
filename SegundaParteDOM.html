@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>Lista</li>
+        <li>Lista</li>
+        <li>Lista</li>
+    </ul>
+    <script>
+        let titulo= document.createElement('h1')
+        titulo.className='titulo'
+        titulo.style.fontSize='24px'
+        titulo.textContent='Creando un elemento de h1'
+        document.body.appendChild(titulo)
+        let subtitulo
+        for (let i = 0; i < 3; i++) {
+            subtitulo=document.createElement('h2')
+            subtitulo.className='subtitulo'
+            subtitulo.style.fontSize='14px'
+            subtitulo.textContent='Creando un elemento de h2'
+            document.body.appendChild(subtitulo)
+        }
+        const ul=document.querySelector('ul')
+        // const lists=document.querySelectorAll('li')
+        // for (const list of lists) {
+        //     ul.remove(list)
+        // }
+        ul.innerHTML=''
+    </script>
+</body>
+</html>

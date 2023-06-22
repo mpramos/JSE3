@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <button>Hazme click</button>
+    <button id="btnClick" onclick="hazmeClick()">Click</button>
+    <button id="dobleClick">Hazme doble click</button>
+    <button id="btnMouse">Rodeame con el mouse</button>
+    <input id="numeroA" type="number">
+    <input id="numeroB" type="number">
+    <button id="sumar">sumar</button>
+    <input id="eventInput" ="text" placeholder="Evento para input, escribe algo">
+    <p></p>
+    <input id="eventBlur" ="text" placeholder="Evento para blur, escribe algo">
+    <p></p>
+    <script>
+        document.body.addEventListener('keypress',e=>{
+            alert(e.keyCode)
+        })
+        function hazmeClick() {
+            alert('me hiciste click')
+        }
+        const button=document.querySelector('button')
+        button.addEventListener('click',e=>{
+            console.log('e ',e)
+            console.log('elemento que dispara al evento ',e.target);
+            console.log('contenido del elemento que dispara el evento ',e.target.textContent);
+        })
+        const buttonDobleClick= document.querySelector('#dobleClick')
+        buttonDobleClick.addEventListener('dblclick',e=>{
+            console.log('e ',e)
+            console.log('elemento que dispara al evento ',e.target);
+            console.log('contenido del elemento que dispara el evento ',e.target.textContent);
+        })
+        const buttonMouseEnter= document.querySelector('#btnMouse')
+        buttonMouseEnter.addEventListener('mouseenter',e=>{
+            console.log('e ',e)
+            console.log('elemento que dispara al evento ',e.target);
+            console.log('contenido del elemento que dispara el evento ',e.target.textContent);
+        })
+        const numeroA= document.querySelector('#numeroA')
+        const numeroB= document.querySelector('#numeroB')
+        const suma =document.querySelector('#sumar');
+        suma.addEventListener('click',()=>{
+            // let a = parseInt(numeroA.value,10);
+            let a=parseInt(numeroA.value,10)
+            let b=parseInt(numeroB.value,10)
+            alert(`${a} + ${b} = ${a+b}`)
+            
+        })
+        const input= document.querySelector('#eventInput')
+        const p= document.querySelector('p')
+        input.addEventListener('input',e=>{
+            p.textContent=e.target.value
+            p.style.color='red'
+        })
+        
+        const inputBlur= document.querySelector('#eventBlur')
+        const parrafo= document.querySelector('p')
+        inputBlur.addEventListener('blur',e=>{
+            parrafo.textContent='Debes completar este campo'
+            parrafo.style.color='red'
+        })
+
+
+    </script>
+</body>
+</html>

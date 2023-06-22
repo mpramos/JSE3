@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log('Hola a todos', 'soy estudiante');
+        console.log('%d %s Evolutech',3,'Cisco')
+        console.log('%c Evolutech','color:green')
+        console.log('%c30 Cisco%c %cen%c %cEvolutech',
+        'color:green',
+        '',
+        'color:red',
+        '',
+        'color:yellow'
+        )
+        console.warn('Estoes una advertencia')
+        console.error('Esto es un mensaje de errror')
+        const nombres=['maria','juana','jose']
+        console.table(nombres)
+        const usuario={
+            nombre:'Juan',
+            edad:25,
+            profesion:'Programador',
+            salario:46987
+        }
+        console.table(usuario);
+        const paises=[
+            ['Bolivia','Argentina'],
+            ['Bolivia','Mexico'],
+            ['Bolivia','Colombia'],
+        ]
+        console.table(paises);
+        console.assert(4>3,'4 es mas grnde que 3')
+        console.assert(3>4,'3 no es mas grande que 4')
+const namesF=['Susana','Martha','Juana']
+const namesM=['Alvaro','Daniel','Juan']
+console.group('Mujeres');
+console.table(namesF);
+console.group('Hombres');
+console.table(namesM);
+const fun=()=>{
+    console.count('Funcion fue llamada')
+}
+fun()
+fun()
+fun()
+
+        
+
+   
+   
+   
+   </script>
+</body>
+</html>
