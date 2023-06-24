@@ -1,0 +1,87 @@
+CRUD(Create, Read, Update, Delete)
+GET: Este método se utiliza para recuperar o leer datos del servidor. Puedes usarlo para obtener una lista de elementos o detalles específicos de un elemento.
+
+<form action="/usuarios" method="GET">
+  <!-- Contenido del formulario -->
+  <button type="submit">Obtener usuarios</button>
+</form>
+CRUD(Create, Read, Update, Delete)
+GET: Este método se utiliza para recuperar o leer datos del servidor. Puedes usarlo para obtener una lista de elementos o detalles específicos de un elemento.
+
+<form action="/usuarios" method="GET">
+  <!-- Contenido del formulario -->
+  <button type="submit">Obtener usuarios</button>
+</form>
+
+
+POST: Se utiliza para enviar datos al servidor para crear un nuevo elemento. En un CRUD, se utilizaría para agregar un nuevo registro a la base de datos.
+<form action="/usuarios" method="POST">
+  <!-- Contenido del formulario -->
+  <button type="submit">Agregar usuario</button>
+</form>
+
+PUT: Este método se usa para enviar datos al servidor para actualizar un elemento existente. En un CRUD, se utilizaría para modificar los datos de un registro.
+<form action="/usuarios/{id}" method="PUT">
+  <!-- Contenido del formulario -->
+  <button type="submit">Actualizar usuario</button>
+</form>
+DELETE: Se utiliza para enviar una solicitud al servidor para eliminar un elemento específico. En un CRUD, se utilizaría para eliminar un registro de la base de datos.
+<form action="/usuarios/{id}" method="DELETE">
+  <!-- Contenido del formulario -->
+  <button type="submit">Eliminar usuario</button>
+</form>
+
+
+200 OK: Indica que la solicitud se completó con éxito y se devuelve el resultado esperado.
+
+201 Created: Se utiliza para indicar que la solicitud ha tenido éxito y se ha creado un nuevo recurso como resultado.
+
+204 No Content: Indica que la solicitud se ha procesado correctamente, pero no hay contenido para devolver.
+
+400 Bad Request: Se utiliza cuando la solicitud no se puede procesar debido a un error del cliente, como parámetros de solicitud incorrectos o datos malformados.
+
+401 Unauthorized: Indica que la solicitud requiere autenticación o credenciales de acceso válidas, y el cliente no las ha proporcionado o son incorrectas.
+
+403 Forbidden: Se utiliza cuando el servidor entiende la solicitud, pero se niega a cumplirla. Indica que el cliente no tiene permiso para acceder al recurso solicitado.
+
+404 Not Found: Indica que el recurso solicitado no se pudo encontrar en el servidor.
+
+405 Method Not Allowed: Se utiliza cuando el método de solicitud utilizado en la solicitud no es válido para el recurso solicitado.
+
+500 Internal Server Error: Indica un error interno en el servidor que impidió que se completara la solicitud del cliente.
+
+POST: Se utiliza para enviar datos al servidor para crear un nuevo elemento. En un CRUD, se utilizaría para agregar un nuevo registro a la base de datos.
+<form action="/usuarios" method="POST">
+  <!-- Contenido del formulario -->
+  <button type="submit">Agregar usuario</button>
+</form>
+
+PUT: Este método se usa para enviar datos al servidor para actualizar un elemento existente. En un CRUD, se utilizaría para modificar los datos de un registro.
+<form action="/usuarios/{id}" method="PUT">
+  <!-- Contenido del formulario -->
+  <button type="submit">Actualizar usuario</button>
+</form>
+DELETE: Se utiliza para enviar una solicitud al servidor para eliminar un elemento específico. En un CRUD, se utilizaría para eliminar un registro de la base de datos.
+<form action="/usuarios/{id}" method="DELETE">
+  <!-- Contenido del formulario -->
+  <button type="submit">Eliminar usuario</button>
+</form>
+
+
+200 OK: Indica que la solicitud se completó con éxito y se devuelve el resultado esperado.
+
+201 Created: Se utiliza para indicar que la solicitud ha tenido éxito y se ha creado un nuevo recurso como resultado.
+
+204 No Content: Indica que la solicitud se ha procesado correctamente, pero no hay contenido para devolver.
+
+400 Bad Request: Se utiliza cuando la solicitud no se puede procesar debido a un error del cliente, como parámetros de solicitud incorrectos o datos malformados.
+
+401 Unauthorized: Indica que la solicitud requiere autenticación o credenciales de acceso válidas, y el cliente no las ha proporcionado o son incorrectas.
+
+403 Forbidden: Se utiliza cuando el servidor entiende la solicitud, pero se niega a cumplirla. Indica que el cliente no tiene permiso para acceder al recurso solicitado.
+
+404 Not Found: Indica que el recurso solicitado no se pudo encontrar en el servidor.
+
+405 Method Not Allowed: Se utiliza cuando el método de solicitud utilizado en la solicitud no es válido para el recurso solicitado.
+
+500 Internal Server Error: Indica un error interno en el servidor que impidió que se completara la solicitud del cliente.
