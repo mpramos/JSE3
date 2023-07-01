@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        font-family: system-ui;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    .filter-container {
+        margin: 20px 0;
+        text-align: center;
+    }
+    #characters-container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .character-card{
+        background-color: black;
+        border-radius: 4px;
+        padding:10px;
+        margin:10px;
+        width:200px;
+        text-align: center;
+    }
+    .character-card img{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin-bottom: 10px;
+    }
+    .character-card h3{
+        color:white;
+        margin-bottom: 5px;
+    }
+    .character-card p{
+        font-size: 14px;
+        color:#888;
+        color:green
+    }
+
+</style>
+
+<body>
+    <h1>Rick and Morty</h1>
+    <div class="filter-container">
+        <label for="status-filter">Filtrar por estado</label>
+        <select id="status-filter" type="text">
+            <option value="alive">Vivos</option>
+            <option value="dead">Muertos</option>
+            <option value="unknown">Desconocido</option>
+            </select>
+    </div>
+    <div id="characters-container">
+    </div>
+    <script>
+        const characterContainer = document.getElementById('characters-container')
+        const statusFilter = document.getElementById('status-filter')
+        statusFilter.addEventListener('change', () => {
+            const selectedStatus = statusFilter.value
+            console.log('selectedStatus ',selectedStatus);
+            fetchCharacters(selectedStatus)
+        })
+
+        async function fetchCharacters(status) {
+            characterContainer.innerHTML = 'Cargando ...'
+            try {
+                const respuesta = await fetch(`https://rickandmortyapi.com/api/character/?status=${status}`)
+                const data = await respuesta.json()
+                displayCharacters(data.results)
+            } catch (error) {
+                characterContainer.innerHTML = 'Error al cargar personajes'
+            }
+        }
+        function displayCharacters(characters) {
+            characterContainer.innerHTML = ''
+            characters.forEach(character => {
+                const card = document.createElement('div')
+                card.className = 'character-card'
+
+                const image = document.createElement('img')
+                image.src = character.image
+                const name = document.createElement('h3')
+                name.textContent = character.name
+                const status = document.createElement('p')
+                status.textContent = `Status: ${character.status}`
+                const species = document.createElement('p')
+                species.textContent = `Species: ${character.species}`
+                card.appendChild(image)
+                card.appendChild(name)
+                card.appendChild(status)
+                card.appendChild(species)
+
+                characterContainer.appendChild(card);
+            });
+        }
+        fetchCharacters('dead')
+    </script>
+</body>
+
+</html>

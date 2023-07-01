@@ -32,7 +32,6 @@ app.post('/usuarios',(req,res)=>{
     console.log('newUsuario', newUsuario);
     newUsuario.id=usuarios.length+1
     console.log(newUsuario.id);
-    console.log('------');
     usuarios.push(newUsuario)
     res.status(201).json(newUsuario)
 })

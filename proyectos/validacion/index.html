@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: system-ui;
+        }
+        h1{
+            text-align: center;
+        }
+        .password-container {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Validacion de contraseñas</h1>
+    <div class="password-container">
+        <label for="password">Contraseña</label>
+        <input id="password" type="password">
+        <button id="validate-btn">Validar</button>
+        <p id="validation-result"></p>
+    </div>
+    <script>
+        const passwordInput = document.getElementById('password')
+        const validateBtn = document.getElementById('validate-btn')
+        const validateResult = document.getElementById('validation-result')
+        validateBtn.addEventListener('click',()=>{
+            const password=passwordInput.value
+            const isValid=validatePassword(password)
+            if (isValid) {
+                validateResult.textContent='Contraseña válida'
+                validateResult.style.color='green'
+            } else {
+                validateResult.textContent='Contraseña invalida. Asegúrate de que tenga 10 caracteres, al menos una letra mayuscula , uan letra minuscula, un numero y un simbolo especial'
+                validateResult.style.color='red'
+            }
+        })
+        function validatePassword(password) {
+            const regex=/^(?=.*[a-z])(?=.[A-Z]*)(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{10}$/
+            return regex.test(password)
+        }
+    </script>
+</body>
+</html>
